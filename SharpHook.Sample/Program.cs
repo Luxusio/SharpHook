@@ -39,7 +39,7 @@ public static class Program
         Console.WriteLine($"Pointer sensitivity: {UioHook.GetPointerSensitivity()}");
         Console.WriteLine($"Multi-click time: {UioHook.GetMultiClickTime()}");
 
-        var screens = UioHook.CreateScreenInfo();
+        var screens = UioHook.CreateScreenInfoData();
 
         foreach (var screen in screens)
         {

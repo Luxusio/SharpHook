@@ -8,7 +8,7 @@
             <summary>
             A keyboard and mouse event simulator which posts events to the OS.
             </summary>
-            <seealso cref="M:SharpHook.Native.UioHook.PostEvent(SharpHook.Native.UioHookEvent@)" />
+            <seealso cref="!:UioHook.PostEvent(ref UioHookEvent)" />
         </member>
         <member name="M:SharpHook.EventSimulator.SimulateKeyPress(SharpHook.Native.KeyCode,SharpHook.Native.ModifierMask)">
             <summary>
@@ -550,7 +550,7 @@
             Represents a function which is called by libuiohook when an event occurs.
             </summary>
             <param name="e">The event that has occured.</param>
-            <seealso cref="M:SharpHook.Native.UioHook.SetDispatchProc(SharpHook.Native.DispatchProc)" />
+            <seealso cref="!:UioHook.SetDispatchProc(DispatchProc)" />
         </member>
         <member name="T:SharpHook.Native.EventType">
             <summary>
@@ -946,25 +946,25 @@
             <value>A hook callback function which does nothing.</value>
             <remarks>You can use this function to "unset" a hook callback function.</remarks>
         </member>
-        <member name="M:SharpHook.Native.UioHook.SetDispatchProc(SharpHook.Native.DispatchProc)">
+        <member name="F:SharpHook.Native.UioHook.SetDispatchProc">
             <summary>
             Sets the hook callback function.
             </summary>
             <param name="dispatchProc">The function to call when an event is raised.</param>
         </member>
-        <member name="M:SharpHook.Native.UioHook.Run">
+        <member name="F:SharpHook.Native.UioHook.Run">
             <summary>
             Runs the global hook and blocks the thread until it's stopped.
             </summary>
             <returns>The result of the operation.</returns>
         </member>
-        <member name="M:SharpHook.Native.UioHook.Stop">
+        <member name="F:SharpHook.Native.UioHook.Stop">
             <summary>
             Stops the global hook.
             </summary>
             <returns>The result of the operation.</returns>
         </member>
-        <member name="M:SharpHook.Native.UioHook.PostEvent(SharpHook.Native.UioHookEvent@)">
+        <member name="F:SharpHook.Native.UioHook.PostEvent">
             <summary>
             Posts a fake input event.
             </summary>
@@ -1042,7 +1042,7 @@
             </remarks>
             <seealso cref="T:SharpHook.EventSimulator" />
         </member>
-        <member name="M:SharpHook.Native.UioHook.CreateScreenInfo(System.Byte@)">
+        <member name="F:SharpHook.Native.UioHook.CreateScreenInfo">
             <summary>
             Gets the information about screens.
             </summary>
@@ -1052,51 +1052,51 @@
             as <paramref name="count" />.
             </returns>
             <remarks>
-            You should use <see cref="M:SharpHook.Native.UioHook.CreateScreenInfo" /> instead as it returns a managed array.
+            You should use <see cref="M:SharpHook.Native.UioHook.CreateScreenInfoData" /> instead as it returns a managed array.
             </remarks>
-            <seealso cref="M:SharpHook.Native.UioHook.CreateScreenInfo" />
+            <seealso cref="M:SharpHook.Native.UioHook.CreateScreenInfoData" />
         </member>
-        <member name="M:SharpHook.Native.UioHook.CreateScreenInfo">
+        <member name="M:SharpHook.Native.UioHook.CreateScreenInfoData">
             <summary>
             Gets the information about screens.
             </summary>
             <returns>The information about screens.</returns>
             <remarks>
-            This is the safe version of <see cref="M:SharpHook.Native.UioHook.CreateScreenInfo(System.Byte@)" /> as it returns a managed array.
+            This is the safe version of <see cref="!:CreateScreenInfo(out byte)" /> as it returns a managed array.
             </remarks>
-            <seealso cref="M:SharpHook.Native.UioHook.CreateScreenInfo(System.Byte@)" />
+            <seealso cref="!:CreateScreenInfo(out byte)" />
         </member>
-        <member name="M:SharpHook.Native.UioHook.GetAutoRepeatRate">
+        <member name="F:SharpHook.Native.UioHook.GetAutoRepeatRate">
             <summary>
             Gets the auto-repeat rate.
             </summary>
             <returns>The auto-repeat rate.</returns>
         </member>
-        <member name="M:SharpHook.Native.UioHook.GetAutoRepeatDelay">
+        <member name="F:SharpHook.Native.UioHook.GetAutoRepeatDelay">
             <summary>
             Gets the auto-repeat delay.
             </summary>
             <returns>The auto-repeat delay.</returns>
         </member>
-        <member name="M:SharpHook.Native.UioHook.GetPointerAccelerationMultiplier">
+        <member name="F:SharpHook.Native.UioHook.GetPointerAccelerationMultiplier">
             <summary>
             Gets the pointer acceleration multiplier.
             </summary>
             <returns>The pointer acceleration multiplier.</returns>
         </member>
-        <member name="M:SharpHook.Native.UioHook.GetPointerAccelerationThreshold">
+        <member name="F:SharpHook.Native.UioHook.GetPointerAccelerationThreshold">
             <summary>
             Gets the pointer acceleration threshold.
             </summary>
             <returns>The pointer acceleration threshold.</returns>
         </member>
-        <member name="M:SharpHook.Native.UioHook.GetPointerSensitivity">
+        <member name="F:SharpHook.Native.UioHook.GetPointerSensitivity">
             <summary>
             Gets the pointer sensitivity.
             </summary>
             <returns>The pointer sensitivity.</returns>
         </member>
-        <member name="M:SharpHook.Native.UioHook.GetMultiClickTime">
+        <member name="F:SharpHook.Native.UioHook.GetMultiClickTime">
             <summary>
             Gets the multi-click time.
             </summary>
